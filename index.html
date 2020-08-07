@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunker</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/index.js" async></script>
+    
+    <!-- logo && scrollToTop -->
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/scrollToTop.css">
+    <script src="js/scrollToTop.js" async></script>
+
+    <!-- print -->
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="section-outer section-header noprint">
+        <div class="section-inner">
+            <img src="assets/logo.png" alt="logo">
+        </div>
+    </header>
+    <!-- / header -->
+
+    <!-- content -->
+    <div class="section-outer section-content">
+        <div class="section-inner flex-column">
+            <div class="choice flex-row noprint">
+                Кол-во игроков:
+                <select class="numOfPlayers">
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                </select>
+            </div>
+
+            <div class="button noprint">Create a new pdf</div>            
+            <div class="pdfFile noprint">PDF:</div>
+            <div class="flex-column mainBlock"></div>
+        </div>
+    </div>
+    <!-- / content -->
+
+    <!-- / scrollToTop -->
+    <div class="scroll-up noprint">
+        <svg class="scroll-up__svg" viewBox="-2 -2 52 52">
+            <path 
+                class="scroll-up__svg-path"
+                d="
+                    M24,0
+                    a24,24 0 0,1 0,48
+                    a24,24 0 0,1 0,-48
+                "
+            />
+        </svg>
+    </div>
+    <!-- / scrollToTop -->
+</body>
+</html>

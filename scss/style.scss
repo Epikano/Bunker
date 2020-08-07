@@ -1,0 +1,293 @@
+// @media (max-width: 1199px) {}
+// @media (max-width: 991px) {}
+// @media (max-width: 767px) {}
+// @media (max-width: 575px) {}
+
+// === Mixins ===
+
+// === / Mixins ===
+
+// === Variables ===
+$yellowColor: #FECC17;
+// === / Variables ===
+
+// === Common ===
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Russo One',sans-serif;
+    background: url('../assets/bodyBack.jpg') repeat 50% 50%;
+}
+
+.section-outer {
+    padding: 0 40px;
+}
+
+.section-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+// === / Common ===
+
+// === header ===
+.section-header {
+    background: $yellowColor;
+    opacity: 0.7;
+
+    .section-inner {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100px;
+            padding: 10px 0;
+        }
+    }
+}
+
+.section-content {
+    .section-inner {
+        align-items: center;
+    }
+
+
+}
+// === / header ===
+
+// === / card ===
+.card {
+    width: 263px;
+    height: 373px;
+    position: relative;
+    color: $yellowColor;
+    font-weight: 700;
+
+    &::before {
+        content: '';
+        background-image: url("../assets/Земля.png");
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10000;
+    }
+
+    &-type {
+        height: calc(373px * 0.24);
+        background: black;
+
+
+        &-content {
+            padding: 22px 25px 0 25px;
+            height: calc(373px * 0.24);
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &-img {
+        height: calc(373px * 0.52);
+        background: #E2B617;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &-content {
+            max-height: 180px;
+            max-width: 211px;
+        }
+    }
+
+    &-name {
+        height: calc(373px * 0.24);
+        background: black;
+
+        &-content {
+            padding: 0 25px 22px 25px;
+            height: calc(373px * 0.24);
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: white 7px solid;
+        margin: 15px;
+        border-radius: 14px;
+        opacity: 0.8;
+    }
+}
+// === / card ===
+
+.choice {
+    width: 791px;
+    margin-top: 30px;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    color: $yellowColor;
+
+    .numOfPlayers {
+        margin-left: 10px;
+    }
+}
+
+.button {
+    margin-top: 30px;
+    font-size: 40px;
+    padding: 30px 40px;
+    background: #71b6d5;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 10px 1px black;
+    transition: background-color linear 0.2s, color linear 0.2s;
+}
+
+.button:hover {
+    background: rgb(133, 177, 44);
+    color: white;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
+
+.pdfFile {
+    margin: 40px 0;
+    width: 791px;
+    text-align: center;
+
+    font-size: 60px;
+    font-weight: 700;
+    color: $yellowColor;
+    padding-bottom: 8px;
+    border-bottom: 8px solid;
+}
+
+.cards-container {
+    width: 791px;
+    height: 1122px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.IMGTEXTDIV {
+    font-size: 20px;
+    font-weight: 700px;
+    margin-bottom: 5px;
+}
+
+// === firstTitle ===
+.firstTitle {
+    width: 791px;
+    height: 1122px;
+
+    &-catastrophe, &-bunkerDescription {
+        height: 50%;
+        position: relative;
+
+        &-name {
+            background: black;
+            color: $yellowColor;
+            font-weight: 700;
+            height: calc(1122px * 0.12);
+            font-size: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-description {
+            background: url('../assets/firstTitle.jpg');
+            background-size: cover;
+            height: calc(1122px * 0.38);
+            padding: 32px;
+            
+            &-div {
+                position: relative;
+                flex-wrap: wrap;
+                writing-mode: vertical-rl;
+                height: 100%;
+                position: relative;
+                font-size: 21px;
+                line-height: 23px;
+                font-family: 'Courier New', Courier, monospace;
+
+                p::before {
+                    content: '•';
+                    position: absolute;
+                    transform: translateY(-16px);
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            background-image: url("../assets/Земля.png");
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+        }
+    }
+}
+
+.firstTitle-img {
+    max-width: 200px;
+    max-height: 200px;
+    transform: rotate(90deg);
+    position: absolute;
+    align-self: center;
+    left: 20px;
+    
+}
+
+.PPAD {
+    padding-top: 8px;
+}
+
+.PPAD + .PPAD {
+    margin-right: 4px;
+}
+// === / firstTitle ===
